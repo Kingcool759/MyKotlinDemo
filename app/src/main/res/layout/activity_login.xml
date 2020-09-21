@@ -27,14 +27,15 @@
         android:background="@mipmap/login_bg"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@mipmap/user_img"
         app:layout_constraintBottom_toBottomOf="@+id/userInfo"
         app:layout_constraintLeft_toLeftOf="@+id/leftGuideLine"
         app:layout_constraintRight_toRightOf="@+id/rightGuideLine"
-        app:layout_constraintTop_toTopOf="@+id/userInfo" />
+        app:layout_constraintTop_toTopOf="@+id/userInfo"
+        />
 
     <EditText
         android:id="@+id/user_name"

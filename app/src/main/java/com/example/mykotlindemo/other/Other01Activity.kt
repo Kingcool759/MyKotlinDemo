@@ -6,7 +6,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.mykotlindemo.R
 
 @Route(path = "/main/otherActivity")
-class OtherActivity : AppCompatActivity() {
+class Other01Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_other)
