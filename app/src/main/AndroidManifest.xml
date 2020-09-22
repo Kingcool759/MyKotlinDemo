@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".display.Kotlin01"></activity>
+        <activity android:name=".display.Kotlin03"></activity>
+        <activity android:name=".display.Kotlin02" />
+        <activity android:name=".display.Kotlin01" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
