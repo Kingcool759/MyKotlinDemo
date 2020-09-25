@@ -4,6 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".display.Kotlin02">
+    tools:context=".display.Kotlin02"
+    tools:ignore="MissingConstraints">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:layout_height="?android:attr/actionBarSize"
+        android:text="kotlin中的Recycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecycler"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>
