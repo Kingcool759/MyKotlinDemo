@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity(){
         onClickItem()  //ListView的点击事件处理
     }
     private fun initView(){
-        fruitList.add(Fruit("01：Kotlin中使用ARout进行页面跳转",R.mipmap.jetpack))
-        fruitList.add(Fruit("02：Kotlin中常用的语法修炼",R.mipmap.jetpack))
-        fruitList.add(Fruit("03：Kotlin中使用RecylerView",R.mipmap.jetpack))
+        fruitList.add(Fruit("01：Kotlin中使用ARouter",R.mipmap.jetpack))
+        fruitList.add(Fruit("02：Kotlin中使用Recyler",R.mipmap.jetpack))
+        fruitList.add(Fruit("03：Kotlin中使用变量、语法、函数",R.mipmap.jetpack))
         repeat(20){
             fruitList.add(Fruit("00：Kotlin",R.mipmap.jetpack))
         }
@@ -42,6 +42,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 1->{
                     ARouter.getInstance().build(RouterPath.kotlin02).navigation()
+                }
+                2->{
+                    ARouter.getInstance().build(RouterPath.kotlin03).navigation()
                 }
                 else->{
                     Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
