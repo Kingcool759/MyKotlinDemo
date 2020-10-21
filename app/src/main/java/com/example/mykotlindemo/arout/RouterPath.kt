@@ -5,11 +5,11 @@ object RouterPath {
     const val main = "/main/mainActivity"
 
     //display
-    const val kotlin01 = "/main/kotlin01_activity"
-    const val kotlin02 = "/main/kotlin02_activity"
-    const val kotlin03 = "/main/kotlin03_activity"
+    const val kotlin01 = "/display/kotlin01"
+    const val kotlin02 = "/display/kotlin02"
+    const val kotlin03 = "/display/kotlin03"
+    const val kotlin04 = "/display/kotlin04"
 
     //other
     const val other = "/main/otherActivity"  //为kotlin01来服务的
-
 }

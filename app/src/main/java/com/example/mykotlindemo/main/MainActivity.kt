@@ -15,24 +15,22 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 @Route(path = "/main/mainActivity")
 class MainActivity : AppCompatActivity(){
-    private val fruitList = ArrayList<Fruit>()
+    private val fruitList = listOf<Fruit>(
+        Fruit("01：Kotlin中使用ARouter",R.mipmap.jetpack),
+        Fruit("02：Kotlin中使用Recyler",R.mipmap.jetpack),
+        Fruit("03：Kotlin中使用变量、语法、函数",R.mipmap.jetpack),
+        Fruit("04：Kotlin中使用构造函数",R.mipmap.jetpack)
+
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initView() // 初始化
         val adapter = MainListViewAdapter(this,R.layout.main_listview_item,fruitList)
         main_listView.adapter = adapter
         onClickItem()  //ListView的点击事件处理
     }
-    private fun initView(){
-        fruitList.add(Fruit("01：Kotlin中使用ARouter",R.mipmap.jetpack))
-        fruitList.add(Fruit("02：Kotlin中使用Recyler",R.mipmap.jetpack))
-        fruitList.add(Fruit("03：Kotlin中使用变量、语法、函数",R.mipmap.jetpack))
-        repeat(20){
-            fruitList.add(Fruit("00：Kotlin",R.mipmap.jetpack))
-        }
-    }
+
     private fun onClickItem(){
         main_listView.setOnItemClickListener { parent, view, position, id ->
             val fruit = fruitList[position]
@@ -45,6 +43,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 2->{
                     ARouter.getInstance().build(RouterPath.kotlin03).navigation()
+                }
+                3->{
+                    ARouter.getInstance().build(RouterPath.kotlin04).navigation()
                 }
                 else->{
                     Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()

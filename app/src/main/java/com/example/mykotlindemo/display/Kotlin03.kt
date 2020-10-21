@@ -5,11 +5,12 @@ import android.os.Bundle
 import android.util.Log
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.mykotlindemo.R
+import com.example.mykotlindemo.arout.RouterPath
 import com.example.mykotlindemo.entity.Fruit
 
 private const val TAG = "Kotlin打印"
 private const val c = 3
-@Route(path="/main/kotlin03_activity") //ARouter库的注解，用来处理Activity之间的跳转
+@Route(path = RouterPath.kotlin03) //ARouter库的注解，用来处理Activity之间的跳转
 class Kotlin03 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

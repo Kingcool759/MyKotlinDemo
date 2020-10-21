@@ -2,20 +2,20 @@ package com.example.mykotlindemo.display
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.mykotlindemo.R
 import com.example.mykotlindemo.adapter.RecyclerAdapter
-import kotlinx.android.synthetic.main.activity_kotlin2.*
+import com.example.mykotlindemo.arout.RouterPath
+import kotlinx.android.synthetic.main.activity_kotlin02.*
 
-@Route(path = "/main/kotlin02_activity")
+@Route(path = RouterPath.kotlin02)
 class Kotlin02 : AppCompatActivity() {
     private val textList = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin2)
+        setContentView(R.layout.activity_kotlin02)
         //使用Recycler
         initTextList()
         val layoutManager = LinearLayoutManager(this)

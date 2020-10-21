@@ -9,7 +9,7 @@ import com.example.mykotlindemo.R
 import com.example.mykotlindemo.arout.RouterPath
 import kotlinx.android.synthetic.main.activity_kotlin01.*
 
-@Route(path = "/main/kotlin01_activity")
+@Route(path = RouterPath.kotlin01)
 class Kotlin01 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
