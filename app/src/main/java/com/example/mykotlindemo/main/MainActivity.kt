@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("01：Kotlin中使用ARouter",R.mipmap.jetpack),
         Fruit("02：Kotlin中使用Recyler",R.mipmap.jetpack),
         Fruit("03：Kotlin中使用变量、语法、函数",R.mipmap.jetpack),
-        Fruit("04：Kotlin中使用构造函数",R.mipmap.jetpack)
+        Fruit("04：Kotlin中使用构造函数",R.mipmap.jetpack),
+        Fruit("05：Kotlin中接口调用",R.mipmap.jetpack)
 
     )
 
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 3->{
                     ARouter.getInstance().build(RouterPath.kotlin04).navigation()
+                }
+                4->{
+                    ARouter.getInstance().build(RouterPath.kotlin05).navigation()
                 }
                 else->{
                     Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()

@@ -6,12 +6,13 @@
     <application
         android:name=".app.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/user_img"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".display.Kotlin04"></activity>
+        <activity android:name=".display.Kotlin05"></activity>
+        <activity android:name=".display.Kotlin04" />
         <activity android:name=".display.Kotlin03" />
         <activity android:name=".display.Kotlin02" />
         <activity android:name=".display.Kotlin01" />

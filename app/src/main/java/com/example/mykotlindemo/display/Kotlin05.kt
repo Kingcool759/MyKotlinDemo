@@ -5,25 +5,22 @@ import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.mykotlindemo.R
 import com.example.mykotlindemo.arout.RouterPath
-import com.example.mykotlindemo.entity.Person
 import com.example.mykotlindemo.entity.Student
-import java.nio.file.Path
 
-//类和对象
-@Route(path = RouterPath.kotlin04)
-class Kotlin04 : AppCompatActivity() {
+@Route(path = RouterPath.kotlin05)
+//接口调用
+class Kotlin05 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin04)
+        setContentView(R.layout.activity_kotlin05)
         main()
     }
     private fun main(){
-//        val p = Person()
-//        val student = Student("123",5)
-//        val student1 = Student()
-//        val student2 = Student("千夜零一",23)
-//        val student3 = Student("123",5,"千夜零一",23)
+        val stu = Student("千夜零一","23")
+//        doStudy(stu)
     }
+//    private fun doStudy(study: Study){
+//        study.readBooks()
+//        study.doHomework()
+//    }
 }
-
-

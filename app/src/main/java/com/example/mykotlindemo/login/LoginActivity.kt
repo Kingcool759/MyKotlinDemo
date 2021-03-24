@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        MyApplication(this.application)     //初始化路由在其中
+//        MyApplication(this.application)     //初始化路由在其中
         btn_login.setOnClickListener(this)
     }
     override fun onClick(p0: View?) {
