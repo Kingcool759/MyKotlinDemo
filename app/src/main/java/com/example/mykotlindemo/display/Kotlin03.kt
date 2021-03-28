@@ -30,6 +30,9 @@ class Kotlin03 : AppCompatActivity() {
         listExample()
         //when条件语句，代替了Java中的if...else语句（但也能用，因为Kotlin完全继承了Java的财富）
         whenExample()
+
+        //ceshi
+        testExample()
     }
 
     //变量
@@ -119,6 +122,34 @@ class Kotlin03 : AppCompatActivity() {
             else -> { // 注意这个块
                 Log.i(TAG,"x 不是 1 ，也不是 2")
             }
+        }
+    }
+
+    private fun testExample(){
+        var data = ArrayList<String>()
+        if (data.isEmpty()){
+            Log.d("test1:","empty")
+        }else{
+            Log.d("test2:","null")
+        }
+
+        if (data.isNullOrEmpty()){
+            Log.d("test3:","null || empty")
+        }else{
+            Log.d("test4:","!null & !empty")
+        }
+
+        if (data.isNotEmpty()){
+            Log.d("test5:","!empty")
+        }
+
+        var response1 = null
+        var response2 = ""
+        response1?.let{
+            Log.d("response1:",response1+"")
+        }
+        response2?.let{
+            Log.d("response2:",response2+"")
         }
     }
 }

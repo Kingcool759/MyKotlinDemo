@@ -9,7 +9,7 @@ buildscript {
     }
     dependencies {
         //Gradle与版本号对应：5.4.1
-        classpath 'com.android.tools.build:gradle:3.6.2'
+        classpath 'com.android.tools.build:gradle:3.6.3'
         //Kotlin
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //ARout
