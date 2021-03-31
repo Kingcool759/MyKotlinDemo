@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.mykotlindemo.entity.Good" />
+        <variable
+            name="viewModel"
+            type="com.example.mykotlindemo.viewmodel.Kotlin06ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@color/white"
+            android:text="@{item.name}"
+            android:gravity="center"
+            android:textSize="18sp"
+            tools:text="apple"
+            android:padding="20dp"
+            android:background="@color/gray"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
