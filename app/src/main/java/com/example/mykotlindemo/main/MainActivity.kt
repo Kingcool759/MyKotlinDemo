@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity(){
         Fruit("03：Kotlin中使用变量、语法、函数",R.mipmap.jetpack),
         Fruit("04：Kotlin中使用构造函数",R.mipmap.jetpack),
         Fruit("05：Kotlin中接口调用",R.mipmap.jetpack),
-        Fruit("06：RecyclerView拖拽冲排序",R.mipmap.jetpack)
+        Fruit("06：RecyclerView拖拽冲排序",R.mipmap.jetpack),
+        Fruit("07：Glide三级缓存实战",R.mipmap.jetpack),
+        Fruit("08：BitmapUtil实战",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +55,12 @@ class MainActivity : AppCompatActivity(){
                 }
                 5->{
                     ARouter.getInstance().build(RouterPath.kotlin06).navigation()
+                }
+                6->{
+                    ARouter.getInstance().build(RouterPath.kotlin07).navigation()
+                }
+                7->{
+                    ARouter.getInstance().build(RouterPath.kotlin08).navigation()
                 }
                 else->{
                     Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
