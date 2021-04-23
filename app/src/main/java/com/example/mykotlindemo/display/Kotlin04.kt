@@ -30,6 +30,8 @@ class Kotlin04 : AppCompatActivity() {
         }
 
         //merge:1
+
+        //merge:2
     }
 }
 
