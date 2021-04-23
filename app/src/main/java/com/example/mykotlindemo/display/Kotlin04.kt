@@ -28,6 +28,8 @@ class Kotlin04 : AppCompatActivity() {
         if (et_IdCardCode.text.toString().isEmpty()){
             Toast.makeText(this,"请输入数据",Toast.LENGTH_SHORT).show()
         }
+
+        //merge:1
     }
 }
 
