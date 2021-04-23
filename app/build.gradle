@@ -32,10 +32,10 @@ android {
         enabled = true
     }
 }
-
-kapt{
-    generateStubs = true
-}
+//
+//kapt{
+//    generateStubs = true
+//}
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])

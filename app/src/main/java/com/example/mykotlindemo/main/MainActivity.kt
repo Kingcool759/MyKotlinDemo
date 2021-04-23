@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("05：Kotlin中接口调用",R.mipmap.jetpack),
         Fruit("06：RecyclerView拖拽冲排序",R.mipmap.jetpack),
         Fruit("07：Glide三级缓存实战",R.mipmap.jetpack),
-        Fruit("08：BitmapUtil实战",R.mipmap.jetpack)
+        Fruit("08：BitmapUtil实战",R.mipmap.jetpack),
+        Fruit("09：MerrgObservalList使用技巧",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +62,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 7->{
                     ARouter.getInstance().build(RouterPath.kotlin08).navigation()
+                }
+                8 ->{
+                    ARouter.getInstance().build(RouterPath.kotlin09).navigation()
                 }
                 else->{
                     Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
