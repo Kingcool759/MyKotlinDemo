@@ -1,3 +1,5 @@
-** 哈哈哈测试一下
-**** 哈哈哈
-是繁花似锦负担
+** KotlinDemo
+**** 日记
+2021/04/25
+移除已经被官方摒弃的"kotlin-androdi-extensions"方式引入布局id方式，
+改用ViewBinding方式。

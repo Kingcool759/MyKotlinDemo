@@ -8,7 +8,6 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.mykotlindemo.R
 import com.example.mykotlindemo.arout.RouterPath
 import com.example.mykotlindemo.databinding.ActivityKotlin09Binding
-import com.example.mykotlindemo.viewmodel.Kotlin06ViewModel
 import com.example.mykotlindemo.viewmodel.Kotlin09ViewModel
 
 @Route(path = RouterPath.kotlin09)
