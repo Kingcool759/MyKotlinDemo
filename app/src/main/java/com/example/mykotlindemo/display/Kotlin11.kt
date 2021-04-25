@@ -17,8 +17,7 @@ class Kotlin11 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val vBinding = ActivityKotlin11Binding.inflate(layoutInflater)
         setContentView(vBinding.root)
-        val viewPagerAdapter = ViewPagerAdapter()
-        vBinding.viewPager2.adapter = viewPagerAdapter
+        vBinding.viewPager2.adapter = ViewPagerAdapter()
         vBinding.viewPager2.orientation = ViewPager2.ORIENTATION_VERTICAL
     }
 }

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".display.Kotlin11"></activity>
+        <activity android:name=".display.Kotlin12"></activity>
+        <activity android:name=".display.Kotlin11" />
         <activity android:name=".display.Kotlin10" />
         <activity android:name=".display.Kotlin09" />
         <activity android:name=".display.Kotlin08" />

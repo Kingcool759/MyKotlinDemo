@@ -24,9 +24,10 @@ class MainActivity : AppCompatActivity(){
         Fruit("06：RecyclerView拖拽冲排序",R.mipmap.jetpack),
         Fruit("07：Glide三级缓存实战",R.mipmap.jetpack),
         Fruit("08：BitmapUtil实战",R.mipmap.jetpack),
-        Fruit("09：MerrgObservalList使用技巧",R.mipmap.jetpack),
+        Fruit("09：MerrgObservalList使用",R.mipmap.jetpack),
         Fruit("10：ViewBinding使用",R.mipmap.jetpack),
-        Fruit("11：ViewPager2使用",R.mipmap.jetpack)
+        Fruit("11：ViewPager2使用",R.mipmap.jetpack),
+        Fruit("12：Room使用",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,6 +74,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 10 ->{
                     ARouter.getInstance().build(RouterPath.kotlin11).navigation()
+                }
+                11 ->{
+                    ARouter.getInstance().build(RouterPath.kotlin12).navigation()
                 }
                 else->{
                     Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
