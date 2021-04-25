@@ -1,10 +1,12 @@
 package com.example.mykotlindemo.app
 
-import android.app.Application
+import androidx.multidex.MultiDexApplication
 import com.alibaba.android.arouter.BuildConfig
 import com.alibaba.android.arouter.launcher.ARouter
+import com.didichuxing.doraemonkit.DoraemonKit
+import com.ooftf.director.app.Director
 
-class MyApplication : Application() {
+class MyApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) {
@@ -14,5 +16,8 @@ class MyApplication : Application() {
             ARouter.openLog()
         }
         ARouter.init(this)
+        //dokit
+//        DoraemonKit.install(this);
+        Director.init("f562df65d7e2ae3455476b06f9e9dc20",false)
     }
 }

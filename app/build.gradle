@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply from: 'dokit.gradle'
 
 android {
     compileSdkVersion 30
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mykotlindemo"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -22,6 +23,8 @@ android {
             }
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //65536解决
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -44,10 +47,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-//
-//kapt{
-//    generateStubs = true
-//}
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -91,4 +90,21 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
 
+    //dokit
+    debugImplementation 'com.didichuxing.doraemonkit:dokitx:3.3.5'
+    debugImplementation 'com.didichuxing.doraemonkit:dokitx-weex:3.3.5'
+
+    //方法数+类数>65536解决办法
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //okhttp网络日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+
+    //炫酷Logger
+    implementation 'com.orhanobut:logger:2.1.1'
 }

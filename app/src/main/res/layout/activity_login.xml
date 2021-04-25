@@ -28,6 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iconIv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@mipmap/user_img"
