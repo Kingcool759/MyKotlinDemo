@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(){
         Fruit("02：Kotlin中使用Recyler", R.mipmap.jetpack),
         Fruit("03：Kotlin中使用变量、语法、函数", R.mipmap.jetpack),
         Fruit("04：Kotlin中使用构造函数", R.mipmap.jetpack),
-        Fruit("05：Kotlin中接口调用", R.mipmap.jetpack),
+        Fruit("05：Kotlin中接口interface使用", R.mipmap.jetpack),
         Fruit("06：RecyclerView拖拽冲排序", R.mipmap.jetpack),
         Fruit("07：Glide三级缓存实战", R.mipmap.jetpack),
         Fruit("08：BitmapUtil实战", R.mipmap.jetpack),
@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("10：ViewBinding使用", R.mipmap.jetpack),
         Fruit("11：ViewPager2使用", R.mipmap.jetpack),
         Fruit("12：Room使用", R.mipmap.jetpack),
-        Fruit("13：didi-Dokit接入使用", R.mipmap.jetpack)
+        Fruit("13：didi-Dokit接入使用", R.mipmap.jetpack),
+        Fruit("14：连点触发事件使用", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,6 +82,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 12 -> {
                     ARouter.getInstance().build(RouterPath.kotlin13).navigation()
+                }
+                13 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin14).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

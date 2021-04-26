@@ -16,6 +16,7 @@ import java.security.cert.CertificateException
 import java.security.cert.X509Certificate
 import javax.net.ssl.*
 
+
 /**
  * @data on 2020/9/27 2:35 PM
  * @auther KC
@@ -29,6 +30,7 @@ object NetworkPortal {
             .addInterceptor(HttpLoggingInterceptor(HttpLogger()).setLevel(HttpLoggingInterceptor.Level.BODY))
         createHostnameVerifier()?.let { builder.hostnameVerifier(it) }
         /* json 拦截 */
+
         applyDirectorInterceptor(builder)  //dokit显示网络请求数据需要
 
         createSSlSocket()?.let {

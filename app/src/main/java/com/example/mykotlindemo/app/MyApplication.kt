@@ -3,8 +3,12 @@ package com.example.mykotlindemo.app
 import androidx.multidex.MultiDexApplication
 import com.alibaba.android.arouter.BuildConfig
 import com.alibaba.android.arouter.launcher.ARouter
-import com.didichuxing.doraemonkit.DoraemonKit
 import com.ooftf.director.app.Director
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.FormatStrategy
+import com.orhanobut.logger.Logger
+import com.orhanobut.logger.PrettyFormatStrategy
+
 
 class MyApplication : MultiDexApplication() {
     override fun onCreate() {
@@ -16,8 +20,17 @@ class MyApplication : MultiDexApplication() {
             ARouter.openLog()
         }
         ARouter.init(this)
+        //自定义炫酷Logger
+        val formatStrategy: FormatStrategy = PrettyFormatStrategy.newBuilder()
+            .showThreadInfo(true) // (Optional) Whether to show thread info or not. Default true
+            .methodCount(5) // (Optional) How many method line to show. Default 2
+            .methodOffset(7) // (Optional) Hides internal method calls up to offset. Default 5
+            .tag("My custom tag") // (Optional) Global tag for every log. Default PRETTY_LOGGER
+            .build()
+        Logger.addLogAdapter(AndroidLogAdapter(formatStrategy)) // 初始化Logger
+
         //dokit
 //        DoraemonKit.install(this);
-        Director.init("f562df65d7e2ae3455476b06f9e9dc20",false)
+        Director.init("f562df65d7e2ae3455476b06f9e9dc20", false)
     }
 }

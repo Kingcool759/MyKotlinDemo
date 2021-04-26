@@ -8,7 +8,7 @@ import com.example.mykotlindemo.arout.RouterPath
 import com.example.mykotlindemo.entity.Student
 
 @Route(path = RouterPath.kotlin05)
-//接口调用
+//接口
 class Kotlin05 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

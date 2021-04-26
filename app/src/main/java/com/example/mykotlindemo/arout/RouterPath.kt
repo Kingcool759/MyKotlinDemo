@@ -18,6 +18,7 @@ object RouterPath {
     const val kotlin11 = "/display/kotlin11"
     const val kotlin12 = "/display/kotlin12"
     const val kotlin13 = "/display/kotlin13"
+    const val kotlin14 = "/display/kotlin14"
 
     //other
     const val other = "/main/otherActivity"  //为kotlin01来服务的
