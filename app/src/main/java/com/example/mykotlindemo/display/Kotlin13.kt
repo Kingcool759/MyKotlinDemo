@@ -13,7 +13,6 @@ import com.example.mykotlindemo.viewmodel.Kotlin13ViewModel
 class Kotlin13 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin13)
         //绑定布局
         val vBinding = ActivityKotlin13Binding.inflate(layoutInflater)
         setContentView(vBinding.root)

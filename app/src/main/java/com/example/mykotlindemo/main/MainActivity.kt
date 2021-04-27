@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("11：ViewPager2使用", R.mipmap.jetpack),
         Fruit("12：Room使用", R.mipmap.jetpack),
         Fruit("13：didi-Dokit接入使用", R.mipmap.jetpack),
-        Fruit("14：连点触发事件使用", R.mipmap.jetpack)
+        Fruit("14：连点触发事件使用", R.mipmap.jetpack),
+        Fruit("15：判断app中的Service是否开启和停止", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,6 +86,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 13 -> {
                     ARouter.getInstance().build(RouterPath.kotlin14).navigation()
+                }
+                14 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin15).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()
