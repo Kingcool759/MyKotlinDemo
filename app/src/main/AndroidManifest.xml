@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".display.Kotlin15"></activity>
+        <activity android:name=".display1.Kotlin16"></activity>
+        <activity android:name=".display.Kotlin15" />
         <activity android:name=".display.Kotlin14" />
         <activity android:name=".display.Kotlin13" />
         <activity android:name=".display.Kotlin12" />
@@ -36,12 +37,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".main.MainActivity" />
-        <activity android:name=".other.Other01Activity" />
-
-        <!--服务-->
-        <service android:name=".service.ExampleService"
+        <activity android:name=".other.Other01Activity" /> <!-- 服务 -->
+        <service
+            android:name=".service.ExampleService"
             android:exported="false" />
-
     </application>
 
 </manifest>
