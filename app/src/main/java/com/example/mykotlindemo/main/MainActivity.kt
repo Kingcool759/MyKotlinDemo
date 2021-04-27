@@ -98,6 +98,9 @@ class MainActivity : AppCompatActivity(){
                 15 -> {
                     ARouter.getInstance().build(RouterPath.kotlin16).navigation()
                 }
+                16 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin17).navigation()
+                }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()
                 }
