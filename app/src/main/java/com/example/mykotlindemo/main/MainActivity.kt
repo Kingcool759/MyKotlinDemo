@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("13：didi-Dokit接入使用", R.mipmap.jetpack),
         Fruit("14：连点触发事件使用", R.mipmap.jetpack),
         Fruit("15：判断app中的Service是否开启和停止", R.mipmap.jetpack),
-        Fruit("16：防止连续点击实现", R.mipmap.jetpack)
+        Fruit("16：防止连续点击实现", R.mipmap.jetpack),
+        Fruit("17：PictureSelector使用", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
