@@ -7,14 +7,15 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.mykotlindemo.R
 import com.example.mykotlindemo.arout.RouterPath
-import kotlinx.android.synthetic.main.activity_kotlin01.*
+import com.example.mykotlindemo.databinding.ActivityKotlin01Binding
 
 @Route(path = RouterPath.kotlin01)
 class Kotlin01 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin01)
-        btn_Arout.setOnClickListener((View.OnClickListener {
+        val vBinding = ActivityKotlin01Binding.inflate(layoutInflater)
+        setContentView(vBinding.root)
+        vBinding.btnArout.setOnClickListener((View.OnClickListener {
             ARouter.getInstance().build(RouterPath.other).navigation()
         }))
     }

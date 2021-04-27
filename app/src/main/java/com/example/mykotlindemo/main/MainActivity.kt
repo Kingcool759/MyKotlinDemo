@@ -8,13 +8,16 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.example.mykotlindemo.R
 import com.example.mykotlindemo.adapter.MainListViewAdapter
 import com.example.mykotlindemo.arout.RouterPath
+import com.example.mykotlindemo.databinding.ActivityMainBinding
 import com.example.mykotlindemo.entity.Fruit
-import com.ooftf.director.app.Director
-import kotlinx.android.synthetic.main.activity_main.*
-
 
 @Route(path = "/main/mainActivity")
 class MainActivity : AppCompatActivity(){
+
+    val vBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
+
     private val fruitList = listOf<Fruit>(
         Fruit("01：Kotlin中使用ARouter", R.mipmap.jetpack),
         Fruit("02：Kotlin中使用Recyler", R.mipmap.jetpack),
@@ -36,14 +39,14 @@ class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(vBinding.root)
         val adapter = MainListViewAdapter(this, R.layout.main_listview_item, fruitList)
-        main_listView.adapter = adapter
+        vBinding.mainListView.adapter = adapter
         onClickItem()  //ListView的点击事件处理
     }
 
     private fun onClickItem(){
-        main_listView.setOnItemClickListener { parent, view, position, id ->
+        vBinding.mainListView.setOnItemClickListener { parent, view, position, id ->
             val fruit = fruitList[position]
             when(position){
                 0 -> {

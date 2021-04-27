@@ -1,13 +1,12 @@
 package com.example.mykotlindemo.display
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.example.mykotlindemo.R
 import com.example.mykotlindemo.adapter.RecyclerAdapter
 import com.example.mykotlindemo.arout.RouterPath
-import kotlinx.android.synthetic.main.activity_kotlin02.*
+import com.example.mykotlindemo.databinding.ActivityKotlin02Binding
 
 @Route(path = RouterPath.kotlin02)
 class Kotlin02 : AppCompatActivity() {
@@ -17,11 +16,12 @@ class Kotlin02 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kotlin02)
+        val vBinding = ActivityKotlin02Binding.inflate(layoutInflater)
+        setContentView(vBinding.root)
         //使用Recycler
         val layoutManager = LinearLayoutManager(this)
-        mRecycler.layoutManager = layoutManager
+        vBinding.mRecycler.layoutManager = layoutManager
         val adapter = RecyclerAdapter(textList)
-        mRecycler.adapter = adapter
+        vBinding.mRecycler.adapter = adapter
     }
 }
