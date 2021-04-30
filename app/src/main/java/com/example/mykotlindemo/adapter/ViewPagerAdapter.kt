@@ -11,7 +11,7 @@ import com.example.mykotlindemo.R
 /**
  * @data on 4/25/21 11:28 AM
  * @auther KC
- * @describe viewPager适配器
+ * @describe viewPager适配器(仿抖音竖向滑动)
  */
 class ViewPagerAdapter : RecyclerView.Adapter<ViewPagerAdapter.MyViewHolder>() {
 

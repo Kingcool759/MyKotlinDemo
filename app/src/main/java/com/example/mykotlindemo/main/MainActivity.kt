@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("14：连点触发事件使用", R.mipmap.jetpack),
         Fruit("15：判断app中的Service是否开启和停止", R.mipmap.jetpack),
         Fruit("16：防止连续点击实现", R.mipmap.jetpack),
-        Fruit("17：PictureSelector使用", R.mipmap.jetpack)
+        Fruit("17：PictureSelector使用", R.mipmap.jetpack),
+        Fruit("18：Fragment+ViewPager使用(懒加载)", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -100,6 +101,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 16 -> {
                     ARouter.getInstance().build(RouterPath.kotlin17).navigation()
+                }
+                17 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin18).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

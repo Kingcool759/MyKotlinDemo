@@ -1,5 +1,6 @@
 package com.example.mykotlindemo.app
 
+import android.app.Application
 import androidx.multidex.MultiDexApplication
 import com.alibaba.android.arouter.BuildConfig
 import com.alibaba.android.arouter.launcher.ARouter
@@ -32,5 +33,11 @@ class MyApplication : MultiDexApplication() {
         //dokit
 //        DoraemonKit.install(this);
         Director.init("f562df65d7e2ae3455476b06f9e9dc20", false)
+
+        instance = this
+    }
+
+    companion object {
+        lateinit var instance: Application
     }
 }
