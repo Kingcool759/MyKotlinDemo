@@ -32,7 +32,7 @@ class Kotlin14 : AppCompatActivity() {
                 }
                 if (count > 10) {
                     count = 0
-                    Toast.makeText(applicationContext, "连点提示！！！", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "快速连点10次提示！！！", Toast.LENGTH_SHORT).show()
                 }
                 time = currentTimeMillis
             }
