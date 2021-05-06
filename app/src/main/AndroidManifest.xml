@@ -48,7 +48,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".display1.Kotlin19"></activity>
+        <activity android:name=".display1.Kotlin20"></activity>
+        <activity android:name=".display1.Kotlin19" />
         <activity android:name=".display1.Kotlin18" />
         <activity android:name=".display1.Kotlin17" />
         <activity android:name=".display1.Kotlin16" />

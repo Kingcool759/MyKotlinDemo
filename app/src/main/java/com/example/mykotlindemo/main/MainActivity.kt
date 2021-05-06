@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("16：防止连续点击实现", R.mipmap.jetpack),
         Fruit("17：PictureSelector使用", R.mipmap.jetpack),
         Fruit("18：Fragment+ViewPager使用(懒加载)", R.mipmap.jetpack),
-        Fruit("19：Activity通过ARouter向Fragment传值", R.mipmap.jetpack)
+        Fruit("19：Activity通过ARouter向Fragment传值", R.mipmap.jetpack),
+        Fruit("20：实现BaseActivity+BaseViewModel抽离", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -108,6 +109,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 18 -> {
                     ARouter.getInstance().build(RouterPath.kotlin19).navigation()
+                }
+                19 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin20).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

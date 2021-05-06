@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.mykotlindemo.base.BaseFragment
 import com.example.mykotlindemo.databinding.Fragment2Binding
 import com.example.mykotlindemo.utils.logd
 import com.example.mykotlindemo.utils.toast
