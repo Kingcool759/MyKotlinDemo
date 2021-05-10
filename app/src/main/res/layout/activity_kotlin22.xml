@@ -7,15 +7,25 @@
 
         <variable
             name="viewModel"
-            type="com.example.mykotlindemo.viewmodel.Kotlin20ViewModel" />
+            type="com.example.mykotlindemo.viewmodel.Kotlin22ViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray"
-        tools:context=".display1.Kotlin20"
+        tools:context=".display1.Kotlin22"
         tools:ignore="MissingConstraints">
+
+<!--        <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+<!--            android:id="@+id/refreshLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            loadMoreListener="@{()->viewModel.loadMore()}"-->
+<!--            loadMoreState="@{viewModel.loadMoreState}"-->
+<!--            refreshListener="@{()->viewModel.refresh()}"-->
+<!--            refreshState="@{viewModel.refreshState}">-->
+<!--        </com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
 
         <androidx.recyclerview.widget.RecyclerView
             itemBinding="@{viewModel.itemBinding}"
@@ -24,7 +34,6 @@
             android:layout_height="0dp"
             android:background="@color/gray"
             android:nestedScrollingEnabled="false"
-            android:paddingVertical="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +41,5 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="3"
             tools:listitem="@layout/item_home_list" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

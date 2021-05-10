@@ -7,7 +7,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
     <color name="base_bg_transparent">#00000000</color>
     <color name="base_color_transparent">#66000000</color>
     <style name="base_dialog_theme" parent="android:Theme.Dialog">

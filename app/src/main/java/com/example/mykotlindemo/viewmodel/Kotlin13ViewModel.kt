@@ -3,7 +3,7 @@ package com.example.mykotlindemo.viewmodel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mykotlindemo.entity.HomePageResBean
+import com.example.mykotlindemo.entity.WxAccountsResp
 import com.example.mykotlindemo.network.ApiCallback
 import com.example.mykotlindemo.network.AppApiService
 import com.example.mykotlindemo.network.NetworkPortal
@@ -21,16 +21,16 @@ class Kotlin13ViewModel : ViewModel() {
         getPublicList()
     }
 
-    var mOfficialAccountsList = MutableLiveData<List<HomePageResBean.DataBean>>()
+    var mOfficialAccountsList = MutableLiveData<List<WxAccountsResp.DataBean>>()
 
 
     //获取wanandroid中的首页公众号列表信息
     fun getPublicList() {
         NetworkPortal.getService(AppApiService::class.java)?.getOfficialAccounts()
-            ?.enqueue(object : ApiCallback<HomePageResBean?>() {
+            ?.enqueue(object : ApiCallback<WxAccountsResp?>() {
                 override fun onSuccessful(
-                    call: Call<HomePageResBean?>,
-                    response: Response<HomePageResBean?>
+                    call: Call<WxAccountsResp?>,
+                    response: Response<WxAccountsResp?>
                 ) {
                     mOfficialAccountsList.setValue(response.body()?.data)
                 }

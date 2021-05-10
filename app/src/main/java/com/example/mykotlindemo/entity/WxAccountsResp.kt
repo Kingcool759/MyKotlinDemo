@@ -1,11 +1,13 @@
 package com.example.mykotlindemo.entity
 
+import com.example.mykotlindemo.response.BaseResponse
+
 /**
  * @data on 4/25/21 4:47 PM
  * @auther KC
- * @describe wanAndroid首页列表响应返回体
+ * @describe wanAndroid网站：微信公众号列表
  */
-class HomePageResBean :BaseResponse() {
+class WxAccountsResp : BaseResponse() {
     var data: List<DataBean>? = null
 
     class DataBean {

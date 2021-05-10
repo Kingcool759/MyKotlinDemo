@@ -19,8 +19,6 @@ import java.io.ByteArrayOutputStream;
  */
 public class BitmapUtil {
 
-    private BitmapUtil(){}
-
     /**
      * 根据资源id获取指定大小的Bitmap对象
      * @param context	应用程序上下文

@@ -38,7 +38,9 @@ class MainActivity : AppCompatActivity(){
         Fruit("17：PictureSelector使用", R.mipmap.jetpack),
         Fruit("18：Fragment+ViewPager使用(懒加载)", R.mipmap.jetpack),
         Fruit("19：Activity通过ARouter向Fragment传值", R.mipmap.jetpack),
-        Fruit("20：实现BaseActivity+BaseViewModel抽离", R.mipmap.jetpack)
+        Fruit("20：实现BaseActivity+BaseViewModel抽离", R.mipmap.jetpack),
+        Fruit("21：图片转换Base64格式", R.mipmap.jetpack),
+        Fruit("22：实现BasePageViewModel封装抽离", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -112,6 +114,12 @@ class MainActivity : AppCompatActivity(){
                 }
                 19 -> {
                     ARouter.getInstance().build(RouterPath.kotlin20).navigation()
+                }
+                20 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin21).navigation()
+                }
+                21 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin22).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()
