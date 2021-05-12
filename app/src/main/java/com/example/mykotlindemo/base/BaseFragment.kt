@@ -15,7 +15,7 @@ open class BaseFragment : Fragment() {
     private var mIsVisibleToUser = false
 
     //表明view是否被加载
-    private var mIsViewCreatetd = false
+    private var mIsViewCreated = false
 
     //表明data是否被加载
     private var mIsDataLoaded = false
@@ -25,7 +25,9 @@ open class BaseFragment : Fragment() {
      */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mIsViewCreatetd = true
+        mIsViewCreated = true
+        //为了保证第一个fragment可见后加载数据，因为setUserVisibleHint() 要比 onViewCreated()要早执行.所以，fragment1数据无法被加载，当条件改变时，就需要懒加载。
+        lazyLoad()
     }
 
     /**
@@ -35,14 +37,7 @@ open class BaseFragment : Fragment() {
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
         mIsVisibleToUser = isVisibleToUser
-        lazyLoad()
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        if (mIsVisibleToUser && !mIsDataLoaded) {
-            lazyLoad()
-        }
+        lazyLoad()  //fragment1并不满足mIsViewCreated
     }
 
     /**
@@ -50,12 +45,12 @@ open class BaseFragment : Fragment() {
      */
     override fun onDestroyView() {
         super.onDestroyView()
-        mIsViewCreatetd = false
+        mIsViewCreated = false
         mIsDataLoaded = false
     }
 
     fun lazyLoad() {
-        if (mIsViewCreatetd && mIsVisibleToUser && !mIsDataLoaded) {
+        if (mIsViewCreated && mIsVisibleToUser && !mIsDataLoaded) {
             initData()
             mIsDataLoaded = true
         }

@@ -24,7 +24,6 @@ class Kotlin22ViewModel(application: Application) :BasePageViewModel<DataX>(appl
     override fun requestData(page: Int) {
         NetworkPortal.getService(AppApiService::class.java)?.getHomeArticles2(page)?.enqueue(
             LiveDataCallback<HomeArticlesResp>(baseLiveData)
-                .bindLoading()
                 .bindSmartRefresh()
                 .bindStateLayout()
                 .doOnResponseSuccess { _, response ->
