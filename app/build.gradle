@@ -120,6 +120,7 @@ dependencies {
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
     implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
 
+    //刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
 
 }

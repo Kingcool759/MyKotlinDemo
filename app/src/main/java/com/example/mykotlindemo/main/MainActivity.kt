@@ -41,7 +41,10 @@ class MainActivity : AppCompatActivity(){
         Fruit("20：实现BaseActivity+BaseViewModel抽离", R.mipmap.jetpack),
         Fruit("21：图片转换Base64格式", R.mipmap.jetpack),
         Fruit("22：实现BasePageViewModel封装抽离", R.mipmap.jetpack),
-        Fruit("23：Fragment+ViewPager2使用", R.mipmap.jetpack)
+        Fruit("23：Fragment+ViewPager2使用", R.mipmap.jetpack),
+        Fruit("24：弹幕滚动效果", R.mipmap.jetpack),
+        Fruit("25：动画实现Loading效果", R.mipmap.jetpack),
+        Fruit("26：SparseArray、ArrayMap、HashMap", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -124,6 +127,15 @@ class MainActivity : AppCompatActivity(){
                 }
                 22 -> {
                     ARouter.getInstance().build(RouterPath.kotlin23).navigation()
+                }
+                23 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin24).navigation()
+                }
+                24 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin25).navigation()
+                }
+                25 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin26).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

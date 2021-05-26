@@ -48,7 +48,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.NoActionBar">
-        <activity android:name=".display1.Kotlin23"></activity>
+        <activity android:name=".display1.Kotlin26"></activity>
+        <activity android:name=".display1.Kotlin25" />
+        <activity android:name=".display1.Kotlin24" />
+        <activity android:name=".display1.Kotlin23" />
         <activity android:name=".display1.Kotlin22" />
         <activity
             android:name=".display1.Kotlin21"
@@ -74,14 +77,18 @@
         <activity android:name=".display.Kotlin03" />
         <activity android:name=".display.Kotlin02" />
         <activity android:name=".display.Kotlin01" />
-        <activity android:name=".login.LoginActivity">
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.MainActivity" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true" />
         <activity android:name=".other.Other01Activity" /> <!-- 服务 -->
         <service
             android:name=".service.ExampleService"
