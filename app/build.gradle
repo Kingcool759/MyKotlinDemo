@@ -123,4 +123,7 @@ dependencies {
     //刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
 
+    //工具类集合
+    implementation 'com.blankj:utilcodex:1.30.6'
+
 }
