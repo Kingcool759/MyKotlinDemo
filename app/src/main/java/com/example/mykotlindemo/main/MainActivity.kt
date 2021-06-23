@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("23：Fragment+ViewPager2使用", R.mipmap.jetpack),
         Fruit("24：弹幕滚动效果", R.mipmap.jetpack),
         Fruit("25：动画实现Loading效果", R.mipmap.jetpack),
-        Fruit("26：SparseArray、ArrayMap、HashMap", R.mipmap.jetpack)
+        Fruit("26：SparseArray、ArrayMap、HashMap", R.mipmap.jetpack),
+        Fruit("27：性能优化-布局优化", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -136,6 +137,9 @@ class MainActivity : AppCompatActivity(){
                 }
                 25 -> {
                     ARouter.getInstance().build(RouterPath.kotlin26).navigation()
+                }
+                26 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin27).navigation()
                 }
                 else->{
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

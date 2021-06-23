@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".display1.Kotlin26">
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        tools:text="哈哈哈哈哈"
+        android:padding="5dp"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
