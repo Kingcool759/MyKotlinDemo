@@ -12,7 +12,7 @@ import com.example.mykotlindemo.databinding.ActivityMainBinding
 import com.example.mykotlindemo.entity.Fruit
 
 @Route(path = "/main/mainActivity")
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     val vBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
@@ -45,7 +45,8 @@ class MainActivity : AppCompatActivity(){
         Fruit("24：弹幕滚动效果", R.mipmap.jetpack),
         Fruit("25：动画实现Loading效果", R.mipmap.jetpack),
         Fruit("26：SparseArray、ArrayMap、HashMap", R.mipmap.jetpack),
-        Fruit("27：性能优化-布局优化", R.mipmap.jetpack)
+        Fruit("27：性能优化-布局优化", R.mipmap.jetpack),
+        Fruit("28：Android中Intent时的flags", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,10 +57,10 @@ class MainActivity : AppCompatActivity(){
         onClickItem()  //ListView的点击事件处理
     }
 
-    private fun onClickItem(){
+    private fun onClickItem() {
         vBinding.mainListView.setOnItemClickListener { parent, view, position, id ->
             val fruit = fruitList[position]
-            when(position){
+            when (position) {
                 0 -> {
                     ARouter.getInstance().build(RouterPath.kotlin01).navigation()
                 }
@@ -141,7 +142,10 @@ class MainActivity : AppCompatActivity(){
                 26 -> {
                     ARouter.getInstance().build(RouterPath.kotlin27).navigation()
                 }
-                else->{
+                27 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin28).navigation()
+                }
+                else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()
                 }
             }
