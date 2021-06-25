@@ -46,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         Fruit("25：动画实现Loading效果", R.mipmap.jetpack),
         Fruit("26：SparseArray、ArrayMap、HashMap", R.mipmap.jetpack),
         Fruit("27：性能优化-布局优化", R.mipmap.jetpack),
-        Fruit("28：Android中Intent时的flags", R.mipmap.jetpack)
+        Fruit("28：Android中Intent时的flags", R.mipmap.jetpack),
+        Fruit("29：Kotlin语法糖", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -144,6 +145,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 27 -> {
                     ARouter.getInstance().build(RouterPath.kotlin28).navigation()
+                }
+                28 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin29).navigation()
                 }
                 else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()
