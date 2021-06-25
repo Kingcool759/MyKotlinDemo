@@ -48,7 +48,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".display1.Kotlin29"></activity>
+        <activity android:name=".display1.Kotlin30"></activity>
+        <activity android:name=".display1.Kotlin29" />
         <activity android:name=".other.Intent2Activity" />
         <activity android:name=".other.Intent1Activity" />
         <activity android:name=".display1.Kotlin28" />
