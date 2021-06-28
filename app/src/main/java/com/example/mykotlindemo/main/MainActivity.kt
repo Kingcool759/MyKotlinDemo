@@ -48,7 +48,8 @@ class MainActivity : AppCompatActivity() {
         Fruit("27：性能优化-布局优化", R.mipmap.jetpack),
         Fruit("28：Android中Intent时的flags", R.mipmap.jetpack),
         Fruit("29：Kotlin语法糖", R.mipmap.jetpack),
-        Fruit("30：TextView如何添加图片", R.mipmap.jetpack)
+        Fruit("30：TextView如何添加图片", R.mipmap.jetpack),
+        Fruit("31：关于扩展函数", R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -152,6 +153,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 29 -> {
                     ARouter.getInstance().build(RouterPath.kotlin30).navigation()
+                }
+                30 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin31).navigation()
                 }
                 else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()
