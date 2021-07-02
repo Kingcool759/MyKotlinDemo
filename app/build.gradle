@@ -129,4 +129,6 @@ dependencies {
     //Alpha启动框架
     implementation 'com.alibaba.android:alpha:1.0.0.1@aar'
 
+    //MMKV
+    implementation 'com.tencent:mmkv-static:1.0.23'
 }

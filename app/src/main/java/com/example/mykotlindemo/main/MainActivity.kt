@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity() {
         Fruit("29：Kotlin语法糖", R.mipmap.jetpack),
         Fruit("30：TextView如何添加图片", R.mipmap.jetpack),
         Fruit("31：关于扩展函数", R.mipmap.jetpack),
-        Fruit("32: Handler解决内存泄露",R.mipmap.jetpack)
+        Fruit("32: Handler解决内存泄露",R.mipmap.jetpack),
+        Fruit("33: MMKV存储",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -160,6 +161,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 31 -> {
                     ARouter.getInstance().build(RouterPath.kotlin32).navigation()
+                }
+                32 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin33).navigation()
                 }
                 else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

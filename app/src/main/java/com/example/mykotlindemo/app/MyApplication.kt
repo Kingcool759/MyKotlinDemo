@@ -9,6 +9,10 @@ import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.FormatStrategy
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
+import com.tencent.mmkv.MMKV
+
+
+
 
 
 class MyApplication : MultiDexApplication() {
@@ -33,6 +37,8 @@ class MyApplication : MultiDexApplication() {
         //dokit
 //        DoraemonKit.install(this);
         Director.init("f562df65d7e2ae3455476b06f9e9dc20", false)
+
+        MMKV.initialize(this)
 
         instance = this
     }
