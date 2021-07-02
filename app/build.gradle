@@ -126,4 +126,7 @@ dependencies {
     //工具类集合
     implementation 'com.blankj:utilcodex:1.30.6'
 
+    //Alpha启动框架
+    implementation 'com.alibaba.android:alpha:1.0.0.1@aar'
+
 }

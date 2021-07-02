@@ -32,7 +32,7 @@ class Kotlin27 : AppCompatActivity() {
         val tv1 = findViewById<TextView>(R.id.includeViewChild)
         tv1.post {
             Log.e("Kotlin27",("zjw-include: View-layerCount = ")+getViewLayer(tv1))
-//            Log.e("Kotlin27",("zjw-window：height = ")+ window.attributes.height)
+            Log.e("Kotlin27",("zjw-window：height = ")+ window.attributes.height)
         }
 
         //viewStub
@@ -42,17 +42,16 @@ class Kotlin27 : AppCompatActivity() {
         //merge
         val tv3 = findViewById<TextView>(R.id.mergeViewChild)
         Log.e("Kotlin27",("zjw-merge: View-layerCount = ")+getViewLayer(tv3))
-
     }
 
     private fun getViewLayer(view: View):Int{
         if (view.parent==null||view.parent !is View){
             return 0
         }else {
-//            var r = Rect()
-//            view.getGlobalVisibleRect(r)
-            Log.e("Kotlin27",view.parent.javaClass.name)
-//            Log.e("Kotlin27",view.parent.javaClass.name+r)
+            var r = Rect()
+            (view.parent as View).getGlobalVisibleRect(r)
+//            Log.e("Kotlin27",view.parent.javaClass.name)
+            Log.e("Kotlin27",view.parent.javaClass.name+r)
             return getViewLayer(view.parent as View) + 1
         }
     }
