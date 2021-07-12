@@ -12,9 +12,6 @@ import com.orhanobut.logger.PrettyFormatStrategy
 import com.tencent.mmkv.MMKV
 
 
-
-
-
 class MyApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
