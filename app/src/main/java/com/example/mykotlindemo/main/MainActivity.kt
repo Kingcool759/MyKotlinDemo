@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
         Fruit("31：关于扩展函数", R.mipmap.jetpack),
         Fruit("32: Handler解决内存泄露",R.mipmap.jetpack),
         Fruit("33: MMKV存储",R.mipmap.jetpack),
-        Fruit("34: Room数据库使用",R.mipmap.jetpack)
+        Fruit("34: Room数据库使用",R.mipmap.jetpack),
+        Fruit("35: IntentService使用",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -168,6 +169,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 33 -> {
                     ARouter.getInstance().build(RouterPath.kotlin34).navigation()
+                }
+                34 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin35).navigation()
                 }
                 else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

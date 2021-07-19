@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 /**
  * @data on 4/28/21 9:58 AM
  * @auther KC
- * @describe BaseFragment，实现了Fragment懒加载
+ * @describe BaseFragment
  */
 open class BaseFragment : Fragment() {
 

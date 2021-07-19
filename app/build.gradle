@@ -132,4 +132,5 @@ dependencies {
 
     //MMKV
     implementation 'com.tencent:mmkv-static:1.0.23'
+
 }

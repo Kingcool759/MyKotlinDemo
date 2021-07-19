@@ -48,7 +48,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".display2.Kotlin34"></activity>
+        <activity android:name=".display2.Kotlin35"></activity>
+        <activity android:name=".display2.Kotlin34" />
         <activity android:name=".display2.Kotlin33" />
         <activity android:name=".display2.Kotlin32" />
         <activity android:name=".display2.Kotlin31" />
@@ -103,6 +104,12 @@
         <service
             android:name=".service.ExampleService"
             android:exported="false" />
+
+        <service android:name=".service.WorkService">
+            <intent-filter>
+                <action android:name=".service.WorkService"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
