@@ -20,7 +20,6 @@ import com.google.android.material.tabs.TabLayout
 class Kotlin37 : AppCompatActivity() {
 
     lateinit var tabLayout: TabLayout
-    lateinit var frameLayout: FrameLayout
     val titles = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +27,6 @@ class Kotlin37 : AppCompatActivity() {
 
         setContentView(R.layout.activity_kotlin37)
         tabLayout = findViewById(R.id.tabLayout)
-        frameLayout = findViewById(R.id.frameLayout)
     }
 
     fun setTabLayoutAndFragment() {
@@ -43,10 +41,10 @@ class Kotlin37 : AppCompatActivity() {
                 val fragmentManager = supportFragmentManager
                 val transaction = fragmentManager.beginTransaction()
                 when (tab?.position) {
-                    0 -> transaction.add(R.layout.fragment_1, Fragment1())
-                    1 -> transaction.add(R.layout.fragment_2, Fragment2())
-                    2 -> transaction.add(R.layout.fragment_3, Fragment3())
-                    3 -> transaction.add(R.layout.fragment_4, Fragment4())
+                    0 -> transaction.add(R.id.frameLayout, Fragment1())
+                    1 -> transaction.add(R.id.frameLayout, Fragment2())
+                    2 -> transaction.add(R.id.frameLayout, Fragment3())
+                    3 -> transaction.add(R.id.frameLayout, Fragment4()) //把Fragment加到指定的FrameLayout布局中
                 }
                 transaction.commit()
             }
