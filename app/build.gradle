@@ -133,4 +133,6 @@ dependencies {
     //MMKV
     implementation 'com.tencent:mmkv-static:1.0.23'
 
+    //表格
+    implementation 'com.evrencoskun.library:tableview:0.8.9.4'
 }

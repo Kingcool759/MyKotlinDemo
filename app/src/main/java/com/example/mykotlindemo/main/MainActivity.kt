@@ -53,7 +53,9 @@ class MainActivity : AppCompatActivity() {
         Fruit("32: Handler解决内存泄露",R.mipmap.jetpack),
         Fruit("33: MMKV存储",R.mipmap.jetpack),
         Fruit("34: Room数据库使用",R.mipmap.jetpack),
-        Fruit("35: IntentService使用",R.mipmap.jetpack)
+        Fruit("35: IntentService使用",R.mipmap.jetpack),
+        Fruit("36: TableView使用",R.mipmap.jetpack),
+        Fruit("37: TabLayout+Fragment使用",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -172,6 +174,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 34 -> {
                     ARouter.getInstance().build(RouterPath.kotlin35).navigation()
+                }
+                35 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin36).navigation()
+                }
+                36 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin37).navigation()
                 }
                 else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

@@ -38,6 +38,7 @@ class Kotlin18 : AppCompatActivity() {
         fragments.add(Fragment2())
         fragments.add(Fragment3())
         fragments.add(Fragment4())
+        vBinding.viewPager.setIsCanScroll(false)
         vBinding.viewPager.adapter = PublicTabAdapter(supportFragmentManager,fragments,titles)
         vBinding.tabLayout.setupWithViewPager(vBinding.viewPager)
     }
