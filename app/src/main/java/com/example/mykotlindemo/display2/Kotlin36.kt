@@ -6,8 +6,8 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.evrencoskun.tableview.TableView
 import com.example.mykotlindemo.R
 import com.example.mykotlindemo.arout.RouterPath
-import com.example.mykotlindemo.tableview.TableViewAdapter
-import com.example.mykotlindemo.tableview.TableViewListener
+//import com.example.mykotlindemo.tableview.TableViewAdapter
+//import com.example.mykotlindemo.tableview.TableViewListener
 import com.example.mykotlindemo.tableview.TableViewModel
 
 @Route(path = RouterPath.kotlin36)
