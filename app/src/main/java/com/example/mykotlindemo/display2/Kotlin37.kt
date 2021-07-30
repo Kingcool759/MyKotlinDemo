@@ -41,20 +41,18 @@ class Kotlin37 : AppCompatActivity() {
                 val fragmentManager = supportFragmentManager
                 val transaction = fragmentManager.beginTransaction()
                 when (tab?.position) {
-                    0 -> transaction.add(R.id.frameLayout, Fragment1())
-                    1 -> transaction.add(R.id.frameLayout, Fragment2())
-                    2 -> transaction.add(R.id.frameLayout, Fragment3())
-                    3 -> transaction.add(R.id.frameLayout, Fragment4()) //把Fragment加到指定的FrameLayout布局中
+                    0 -> transaction.add(R.id.frameLayout_tab, Fragment1())
+                    1 -> transaction.add(R.id.frameLayout_tab, Fragment2())
+                    2 -> transaction.add(R.id.frameLayout_tab, Fragment3())
+                    3 -> transaction.add(R.id.frameLayout_tab, Fragment4()) //把Fragment加到指定的FrameLayout布局中
                 }
                 transaction.commit()
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
         })
     }
