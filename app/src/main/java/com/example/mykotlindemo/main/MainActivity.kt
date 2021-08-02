@@ -56,7 +56,8 @@ class MainActivity : AppCompatActivity() {
         Fruit("35: IntentService使用",R.mipmap.jetpack),
         Fruit("36: TableView使用",R.mipmap.jetpack),
         Fruit("37: TabLayout+Fragment使用",R.mipmap.jetpack),
-        Fruit("38: 动态代理",R.mipmap.jetpack)
+        Fruit("38: 动态代理",R.mipmap.jetpack),
+        Fruit("39: 录音功能",R.mipmap.jetpack)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -184,6 +185,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 37 -> {
                     ARouter.getInstance().build(RouterPath.kotlin38).navigation()
+                }
+                38 -> {
+                    ARouter.getInstance().build(RouterPath.kotlin39).navigation()
                 }
                 else -> {
                     Toast.makeText(this, fruit.name, Toast.LENGTH_SHORT).show()

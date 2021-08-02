@@ -1,6 +1,5 @@
 package com.example.mykotlindemo.display2
 
-import android.media.AudioRecord
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
