@@ -28,24 +28,50 @@ class Kotlin38 : AppCompatActivity() {
 //            }
 //        )
 
-        val p = Proxy.newProxyInstance(
-            this.classLoader,
-            arrayOf(View.OnClickListener::class.java),
+        //【1、对接口方法不做改动情况下】
+//        val proxyImpl = Proxy.newProxyInstance(
+//            this.classLoader,
+//            arrayOf(View.OnClickListener::class.java),
+//            object : InvocationHandler {
+//                override fun invoke(proxy: Any?, method: Method?, args: Array<out Any>?): Any {
+//                    println("begin")
+//                    val result = if(args == null){
+//                        method!!.invoke(proxy)
+//                    }else{
+//                        method!!.invoke(proxy,*args)
+//                    }
+//                    println("end")
+//                    return result
+//                }
+//            }
+//        )
+        //【2、对接口方法进行重写】
+        val base = OnClickListenerImpl()
+        val proxyImpl = Proxy.newProxyInstance(
+            base.javaClass.classLoader,
+            base.javaClass.interfaces,
             object : InvocationHandler {
                 override fun invoke(proxy: Any?, method: Method?, args: Array<out Any>?): Any {
                     println("begin")
                     val result = if(args == null){
-                        method!!.invoke(proxy)
+                        method?.invoke(proxy)
                     }else{
-                        method!!.invoke(proxy,*args)
+                        method?.invoke(proxy,*args)
                     }
                     println("end")
-                    return result
+                    return result!!
                 }
             }
         )
+
         //设置点击事件
         val contentView = findViewById<View>(R.id.contentView)
-        contentView.setOnClickListener(p as View.OnClickListener?)
+        contentView.setOnClickListener(proxyImpl as View.OnClickListener?)
+    }
+
+    class OnClickListenerImpl : View.OnClickListener {
+        override fun onClick(v: View?) {
+            println("onClicked thing ocured!")
+        }
     }
 }
