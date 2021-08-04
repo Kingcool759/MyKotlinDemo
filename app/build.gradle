@@ -130,9 +130,13 @@ dependencies {
     //Alpha启动框架
     implementation 'com.alibaba.android:alpha:1.0.0.1@aar'
 
-    //MMKV
+    //MMKV-持久化
     implementation 'com.tencent:mmkv-static:1.0.23'
 
     //表格
     implementation 'com.evrencoskun.library:tableview:0.8.9.4'
+
+    //图片库
+    implementation 'com.squareup.picasso:picasso:2.5.1'
+
 }

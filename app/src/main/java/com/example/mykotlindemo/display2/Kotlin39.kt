@@ -1,4 +1,4 @@
-package com.example.mykotlindemo.display2
+ package com.example.mykotlindemo.display2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
