@@ -21,6 +21,8 @@ class Kotlin40 : AppCompatActivity() {
         //用法，跟Glide如出一辙
         Picasso.with(this)
             .load("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp7.itc.cn%2Fimages01%2F20210312%2Fad02eab591774ddcbaf1f5425746e31a.png&refer=http%3A%2F%2Fp7.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1630654376&t=1c7204c3964e228e7c5a851d2290390d")
+            .placeholder(R.drawable.placeholder)  //占位符
+            .error(R.drawable.error)  //加载出错
             .into(iv)
     }
 }
